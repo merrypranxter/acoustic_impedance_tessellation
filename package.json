@@ -1,0 +1,22 @@
+{
+  "name": "acoustic-impedance-tessellation",
+  "version": "0.1.0",
+  "description": "Screen-as-tissue ultrasound warp — a GLSL shader suite simulating wave propagation, impedance boundaries, beam-forming, and the imaging modes/artifacts of diagnostic ultrasound.",
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes serve web -l 8080",
+    "serve": "npx --yes serve web -l 8080",
+    "check": "node tools/check_shaders.mjs"
+  },
+  "keywords": [
+    "ultrasound",
+    "shader",
+    "glsl",
+    "webgl",
+    "acoustic-impedance",
+    "medical-imaging",
+    "simulation"
+  ],
+  "license": "MIT",
+  "private": true
+}
