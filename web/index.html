@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>acoustic_impedance_tessellation · viewer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main>
+    <div id="stage">
+      <canvas id="gl"></canvas>
+      <div id="error"></div>
+      <div id="caption">the screen is flesh · the shader is sound</div>
+    </div>
+
+    <aside id="panel">
+      <h1>ultrasound weaver</h1>
+
+      <label class="ctl">
+        <span>shader</span>
+        <select id="shader"></select>
+      </label>
+
+      <label class="ctl">
+        <span>tissue preset</span>
+        <select id="preset"></select>
+      </label>
+
+      <label class="ctl">
+        <span>probe frequency <em id="freq-val"></em></span>
+        <input id="freq" type="range" min="2" max="15" step="0.1" value="6" />
+      </label>
+
+      <label class="ctl">
+        <span>gain <em id="gain-val"></em></span>
+        <input id="gain" type="range" min="0" max="2" step="0.01" value="1" />
+      </label>
+
+      <label class="ctl">
+        <span>time gain comp <em id="tgc-val"></em></span>
+        <input id="tgc" type="range" min="0" max="1" step="0.01" value="0.6" />
+      </label>
+
+      <label class="ctl">
+        <span>focus depth <em id="focus-val"></em></span>
+        <input id="focus" type="range" min="0.02" max="1" step="0.01" value="0.45" />
+      </label>
+
+      <label class="ctl">
+        <span>dynamic range <em id="dr-val"></em></span>
+        <input id="dr" type="range" min="20" max="80" step="1" value="50" />
+      </label>
+
+      <button id="pause">⏸ Pause</button>
+
+      <p class="hint">
+        Click on the canvas to set the M-mode / Doppler interrogation line.
+        Higher frequency = finer detail, shallower penetration.
+      </p>
+    </aside>
+  </main>
+
+  <script src="viewer.js"></script>
+</body>
+</html>
